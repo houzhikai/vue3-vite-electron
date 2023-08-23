@@ -1,23 +1,9 @@
 <template>
   <div class="item">
-    <button @click="onClick1">test1</button>
-    <button @click="onClick2">test2</button>
-    
+    内容区域 welcomeItem2
+
   </div>
 </template>
-<script setup>
-import { useRouter, useRoute } from 'vue-router'
-  const router = useRouter();
-    const route = useRoute();
-  function onClick1() {
-    console.log(111)
-    router.push('/about1')
-  }
-  function onClick2() {
-    console.log(222)
-    router.push('/about2')
-  }
-</script>
 
 <style scoped>
 .item {

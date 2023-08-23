@@ -3,8 +3,8 @@ import { app, BrowserWindow } from "electron";
 
 app.whenReady().then(() => {
   const win = new BrowserWindow({
-    height: 600,
-    width: 800,
+    height: 800,
+    width: 1200,
     webPreferences: {
       nodeIntegration: true, // 可以在渲染进程中使用node的api,为了安全默认是false
       contextIsolation: false, // 关闭渲染京城的沙箱
