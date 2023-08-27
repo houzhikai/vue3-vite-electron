@@ -12,3 +12,6 @@ yarn add unplugin-vue-components -D
 
 # 安装 vue-router
 yarn add vue-router
+
+# warning: LF will be replaced by CRLF in src/components/layout/Header.vue.
+git config core.autocrlf true
