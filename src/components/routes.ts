@@ -10,7 +10,7 @@ import {
 
 import { h } from "vue";
 
-export const routes = [
+export const routes: any[] = [
   {
     path: "/home",
     name: "home",
