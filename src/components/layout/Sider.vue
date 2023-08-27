@@ -15,17 +15,13 @@
       <div v-show="!props.toggleSider" class="title">Test-Project</div>
     </div>
     <a-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline">
-      <a-menu-item key="1">
-        <user-outlined />
-        <span>nav 1</span>
-      </a-menu-item>
-      <a-menu-item key="2">
-        <video-camera-outlined />
-        <span>nav 2</span>
-      </a-menu-item>
-      <a-menu-item key="3">
-        <upload-outlined />
-        <span>nav 3</span>
+      <a-menu-item
+        v-for="item in routes"
+        :key="item.name"
+        :icon="item.icon"
+        @click="jump(item.path)"
+      >
+        {{ item.name }}
       </a-menu-item>
     </a-menu>
   </a-layout-sider>
@@ -33,6 +29,8 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+import { routes } from "../routes";
 
 import {
   UserOutlined,
@@ -40,6 +38,7 @@ import {
   UploadOutlined,
 } from "@ant-design/icons-vue";
 const selectedKeys = ref<string[]>(["1"]);
+const router = useRouter();
 
 const props = defineProps({
   toggleSider: {
@@ -47,6 +46,10 @@ const props = defineProps({
     default: false,
   },
 });
+
+const jump = (path: string) => {
+  router.push(path);
+};
 </script>
 
 <style scoped lang="less">

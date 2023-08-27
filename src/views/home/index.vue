@@ -1,10 +1,5 @@
 <template>
-    <div>homePage</div>
+  <div>homePage</div>
 </template>
 
-<script>
-import {defineComponent} from 'vue'
-export default defineComponent({
-    name: 'Home'
-})
-</script>
+<script setup lang="ts"></script>

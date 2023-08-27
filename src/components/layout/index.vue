@@ -8,13 +8,13 @@
       />
       <a-layout-content
         :style="{
-          margin: '24px 0',
+          margin: '16px 0',
           padding: '24px',
           background: '#fff',
           minHeight: '280px',
         }"
       >
-        Content
+        <router-view />
       </a-layout-content>
       <Footer />
     </a-layout>
