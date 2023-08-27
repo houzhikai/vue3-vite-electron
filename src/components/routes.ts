@@ -12,10 +12,11 @@ import { h } from "vue";
 
 export const routes = [
   {
-    path: "/",
+    path: "/home",
     name: "home",
     icon: () => h(HomeOutlined),
     component: Home,
+    redirect: "/",
   },
   {
     path: "/about1",
