@@ -4,12 +4,9 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import HelloWorldVue from "./components/HelloWorld.vue";
 import WelcomeItemVue from "./components/WelcomeItem.vue";
 import WelcomeItem2 from "./components/WelcomeItem2.vue";
-import TheWelcomeVue from "./components/TheWelcome.vue";
-
-import "./assets/main.css";
 
 const routes = [
-  { path: "/", component: TheWelcomeVue },
+  // { path: "/", component: HelloWorldVue },
   { path: "/about1", component: WelcomeItemVue },
   { path: "/about2", component: WelcomeItem2 },
 ];
